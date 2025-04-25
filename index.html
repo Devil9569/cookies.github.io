@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Cookie Converter | Himu XD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Facebook Cookie Converter</h1>
+            <p class="subtitle">Convert browser cookies to single-line JSON format</p>
+            <p class="subtitle">Version 1.0 | Created by Himu XD</p>
+        </header>
+        
+        <div class="instructions">
+            <h3>How to use:</h3>
+            <ol>
+                <li>Open Facebook in your browser and log in</li>
+                <li>Open Developer Tools (F12 or Ctrl+Shift+I)</li>
+                <li>Go to Application/Storage → Cookies</li>
+                <li>Copy all cookies for facebook.com</li>
+                <li>Paste them in the input box below</li>
+                <li>Click "Convert" to generate the JSON format</li>
+            </ol>
+        </div>
+        
+        <div class="input-section">
+            <label for="cookie-input">Paste your Facebook cookies here:</label>
+            <textarea id="cookie-input" placeholder="Example: sb=abc123; datr=xyz456; c_user=12345; xs=abc..."></textarea>
+        </div>
+        
+        <div class="buttons">
+            <button class="btn-convert" id="convert-btn">Convert</button>
+            <button class="btn-copy" id="copy-btn" disabled>Copy JSON</button>
+            <button class="btn-clear" id="clear-btn">Clear</button>
+        </div>
+        
+        <div class="output-section">
+            <label for="json-output">Converted JSON Output:</label>
+            <textarea id="json-output" readonly></textarea>
+        </div>
+        
+        <div id="status-message" class="status"></div>
+        
+        <footer>
+            <p>Note: This tool runs entirely in your browser. No data is sent to any server.</p>
+            <p>© 2023 Himu XD | For educational purposes only</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
